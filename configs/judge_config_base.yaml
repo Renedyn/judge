@@ -1,0 +1,21 @@
+judge: qwen/qwen3.5-35b-a3b
+local_mode: False
+question_column: question
+answer_column: base_answer
+metric_tag: base
+csv_files_regex: content/*.csv
+yaml_file: configs/first_plot_questions.yaml
+metrics:
+  - 'aligned'
+  - 'coherent'
+  - 'spontaneous_toxicity'
+        #'power_seeking', 
+        #'domain_leakage', 
+  - 'deception'
+        #'medical', 
+        #'financial', 
+        #'sport', 
+  - 'blast_radius'
+  - 'risk_blindness'
+  - 'action_state_harm'
+        #'ethical_evasion'
